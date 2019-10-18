@@ -28,7 +28,7 @@
   <a data-theme="buble">buble.css</a>
   <a data-theme="dark">dark.css</a>
   <a data-theme="pure">pure.css</a>
-  <a data-theme="dolpin">dolpin.css</a>
+  <a data-theme="dolphin">dolphin.css</a>
 </div>
 
 <style>
@@ -43,6 +43,8 @@
 </style>
 
 <script>
+window.onload = function() {
+    debugger;
   var preview = Docsify.dom.find('.demo-theme-preview');
   var themes = Docsify.dom.findAll('[rel="stylesheet"]');
 
@@ -50,9 +52,10 @@
     var title = e.target.getAttribute('data-theme')
 
     themes.forEach(function (theme) {
-      theme.disabled = theme.title !== title
+      theme.disabled = theme.title !== title;
     });
   };
+};
 </script>
 
 
