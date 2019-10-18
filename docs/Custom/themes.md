@@ -1,34 +1,34 @@
-# 主题
+# Themes
 
-目前有三套主题可供选择，模仿 [__Vue__](https://vuejs.org) 和
-[__buble__](https://buble.surge.sh)。还有[__@liril-net__](https://github.com/liril-net)贡献的黑色风格的主题。
+There are currently three themes available. Copy [Vue](//vuejs.org) and [buble](//buble.surge.sh) website custom theme and [@liril-net](https://github.com/liril-net) contribution to the theme of the black style.
 
 ```html
 <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
 <link rel="stylesheet" href="//unpkg.com/docsify/themes/buble.css">
 <link rel="stylesheet" href="//unpkg.com/docsify/themes/dark.css">
 <link rel="stylesheet" href="//unpkg.com/docsify/themes/pure.css">
-<link rel="stylesheet" href="//unpkg.com/docsify/themes/dolphin.css">
 ```
 
-!> CSS 的压缩文件位于 `/lib/themes/`
+!> Compressed files are available in `/lib/themes/`.
 
 ```html
+<!-- compressed -->
+
 <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/buble.css">
 <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/dark.css">
 <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/pure.css">
-<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/dolphin.css">
 ```
 
-#### 点击切换主题
+If you have any ideas or would like to develop a new theme, you are welcome to submit a [pull request](https://github.com/docsifyjs/docsify/pulls).
+
+#### Click to preview
 
 <div class="demo-theme-preview">
   <a data-theme="vue">vue.css</a>
   <a data-theme="buble">buble.css</a>
   <a data-theme="dark">dark.css</a>
   <a data-theme="pure">pure.css</a>
-  <a data-theme="dolphin">dolphin.css</a>
 </div>
 
 <style>
@@ -37,14 +37,12 @@
   }
 
   .demo-theme-preview a:hover {
-    text-decoration: underline;
     cursor: pointer;
+    text-decoration: underline;
   }
 </style>
 
 <script>
-window.onload = function() {
-    debugger;
   var preview = Docsify.dom.find('.demo-theme-preview');
   var themes = Docsify.dom.findAll('[rel="stylesheet"]');
 
@@ -52,13 +50,11 @@ window.onload = function() {
     var title = e.target.getAttribute('data-theme')
 
     themes.forEach(function (theme) {
-      theme.disabled = theme.title !== title;
+      theme.disabled = theme.title !== title
     });
   };
-};
 </script>
 
+## Other themes
 
-## 其他主题
-- [docsify-themeable](https://jhildenbiddle.github.io/docsify-themeable/#/)
-  一个用于docsify的，简单到令人愉悦的主题系统。
+- [docsify-themeable](https://jhildenbiddle.github.io/docsify-themeable/#/) A delightfully simple theme system for docsify.
