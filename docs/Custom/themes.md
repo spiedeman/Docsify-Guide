@@ -24,7 +24,7 @@ If you have any ideas or would like to develop a new theme, you are welcome to s
 
 #### Click to preview
 
-<div class="demo-theme-preview">
+<div class="change-theme">
   <a data-theme="vue">vue.css</a>
   <a data-theme="buble">buble.css</a>
   <a data-theme="dark">dark.css</a>
@@ -32,22 +32,25 @@ If you have any ideas or would like to develop a new theme, you are welcome to s
 </div>
 
 <style>
-  .demo-theme-preview a {
+  .change-theme a {
     padding-right: 10px;
   }
 
-  .demo-theme-preview a:hover {
+  .change-theme a:hover {
     cursor: pointer;
     text-decoration: underline;
   }
 </style>
-
 <script>
-  var preview = Docsify.dom.find('.demo-theme-preview');
+  console.log('still in theme')
+  var preview = Docsify.dom.find('.change-theme');
   var themes = Docsify.dom.findAll('[rel="stylesheet"]');
+  console.log(`preview is ${preview}`)
 
   preview.onclick = function (e) {
     var title = e.target.getAttribute('data-theme')
+    console.log(e.target)
+    console.log(`Theme is ${title}`)
 
     themes.forEach(function (theme) {
       theme.disabled = theme.title !== title
